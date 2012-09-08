@@ -64,6 +64,10 @@ dependencies {
     compile group: 'org.glassfish.web', name: 'javax.el', version: '2.2.3'
 }
 
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.0'
+}
+
 sourceSets {
     main {
         java { srcDirs = [] }
