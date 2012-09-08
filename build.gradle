@@ -4,8 +4,6 @@ apply plugin: 'java'
 apply plugin: 'war'
 
 
-group = 'widen'
-version = '0.1.0-SNAPSHOT'
 webAppDirName = 'web'
 
 sourceCompatibility = 1.7
@@ -13,10 +11,6 @@ targetCompatibility = 1.7
 
 repositories {
 	maven {
-		credentials {
-			username USER
-			password PASSWORD
-		}
 		url mavenCentral()
 	}
 }
@@ -53,9 +47,6 @@ dependencies {
 	runtime group: 'commons-lang', name: 'commons-lang', version: '2.6'
 
     compile group: 'commons-io', name: 'commons-io', version: '2.4'
-
-    compile group: 'widen.hosted', name: 'jsr-310', version: '0.6.3'
-    runtime group: 'widen.hosted', name: 'jsr-310-TZDB', version: '0.6.3'
 
     // JSON
     compile group: 'org.codehaus.jackson', name: 'jackson-mapper-asl', version: '1.9.5'
