@@ -34,7 +34,7 @@ $(document).ready(function() {
         uploadButtonText: "Click Or Drop"
     });
 
-    uploader5 = new qq.FileUploaderBasic({
+    var uploader5 = new qq.FileUploaderBasic({
         multiple: false,
         autoUpload: false,
         action: "/upload/receiver",
