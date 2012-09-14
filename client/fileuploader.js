@@ -284,6 +284,11 @@ qq.FileUploaderBasic = function(o){
         acceptFiles: null,		// comma separated string of mime-types for browser to display in browse dialog
         sizeLimit: 0,
         minSizeLimit: 0,
+        // css
+        classes: {
+            buttonHover: 'qq-upload-button-hover',
+            buttonFocus: 'qq-upload-button-focus'
+        },
         // events
         // return false to cancel submit
         onSubmit: function(id, fileName){},
@@ -346,6 +351,8 @@ qq.FileUploaderBasic.prototype = {
             element: element,
             multiple: this._options.multiple && qq.UploadHandlerXhr.isSupported(),
             acceptFiles: this._options.acceptFiles,
+            hoverClass: this._options.classes.buttonHover,
+            focusClass: this._options.classes.buttonFocus,
             onChange: function(input){
                 self._onInputChange(input);
             }
@@ -598,6 +605,8 @@ qq.FileUploader = function(o){
         classes: {
             // used to get elements from templates
             button: 'qq-upload-button',
+            buttonHover: 'qq-upload-button-hover',
+            buttonFocus: 'qq-upload-button-focus',
             drop: 'qq-upload-drop-area',
             dropActive: 'qq-upload-drop-area-active',
             dropDisabled: 'qq-upload-drop-area-disabled',
